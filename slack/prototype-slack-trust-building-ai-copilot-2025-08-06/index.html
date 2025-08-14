@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust-Building AI Copilot - Slack Premium Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="slack-logo">
+                    <i class="fab fa-slack"></i>
+                    <span>Slack AI Premium</span>
+                </div>
+                <div class="premium-indicator">
+                    <i class="fas fa-crown"></i>
+                    <span>AI Premium - $10/user/month</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Trust Dashboard</h3>
+                    <nav class="trust-nav">
+                        <a href="#" class="nav-item active" data-view="transparency">
+                            <i class="fas fa-eye"></i>
+                            <span>AI Transparency</span>
+                        </a>
+                        <a href="#" class="nav-item" data-view="confidence">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Confidence Scoring</span>
+                        </a>
+                        <a href="#" class="nav-item" data-view="cultural">
+                            <i class="fas fa-users"></i>
+                            <span>Cultural Alignment</span>
+                        </a>
+                        <a href="#" class="nav-item" data-view="progression">
+                            <i class="fas fa-trophy"></i>
+                            <span>Trust Progression</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Trust Health</h3>
+                    <div class="trust-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Overall Trust Score</div>
+                            <div class="metric-value trust-score">87%</div>
+                            <div class="metric-trend positive">↑ 12% this month</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">AI Accuracy</div>
+                            <div class="metric-value accuracy-score">94%</div>
+                            <div class="metric-trend positive">↑ 8% this month</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <!-- AI Transparency View -->
+                <div id="transparency-view" class="view active">
+                    <div class="view-header">
+                        <h1>AI Transparency Dashboard</h1>
+                        <p class="view-subtitle">See exactly how AI reaches its recommendations</p>
+                    </div>
+
+                    <div class="ai-suggestion-card">
+                        <div class="suggestion-header">
+                            <div class="suggestion-title">
+                                <i class="fas fa-robot ai-icon"></i>
+                                <span>AI Suggestion: Meeting Summary & Action Items</span>
+                            </div>
+                            <div class="confidence-badge high">
+                                <i class="fas fa-check-circle"></i>
+                                <span>High Confidence (92%)</span>
+                            </div>
+                        </div>
+
+                        <div class="suggestion-content">
+                            <div class="reasoning-pathway">
+                                <h3>AI Reasoning Pathway</h3>
+                                <div class="reasoning-steps">
+                                    <div class="reasoning-step completed">
+                                        <div class="step-icon">1</div>
+                                        <div class="step-content">
+                                            <h4>Audio Analysis</h4>
+                                            <p>Processed 47-minute meeting recording, identified 6 speakers, 89% audio clarity</p>
+                                            <div class="step-details">
+                                                <span class="detail-tag">Speech-to-text: 97% accuracy</span>
+                                                <span class="detail-tag">Speaker identification: 6/6 confirmed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reasoning-step completed">
+                                        <div class="step-icon">2</div>
+                                        <div class="step-content">
+                                            <h4>Topic Extraction</h4>
+                                            <p>Identified key discussion topics using natural language processing</p>
+                                            <div class="step-details">
+                                                <span class="detail-tag">Topics found: 4 primary, 7 secondary</span>
+                                                <span class="detail-tag">Sentiment: Generally positive</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reasoning-step completed">
+                                        <div class="step-icon">3</div>
+                                        <div class="step-content">
+                                            <h4>Cultural Alignment Check</h4>
+                                            <p>Verified summary style matches team communication preferences</p>
+                                            <div class="step-details">
+                                                <span class="detail-tag">Team style: Professional-casual</span>
+                                                <span class="detail-tag">Match confidence: 94%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reasoning-step completed">
+                                        <div class="step-icon">4</div>
+                                        <div class="step-content">
+                                            <h4>Action Item Generation</h4>
+                                            <p>Generated actionable items with clear ownership and deadlines</p>
+                                            <div class="step-details">
+                                                <span class="detail-tag">Actions identified: 5</span>
+                                                <span class="detail-tag">Owners assigned: 5/5</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ai-output">
+                                <h3>Generated Summary</h3>
+                                <div class="summary-content">
+                                    <h4>Q4 Marketing Campaign Planning - Oct 15, 2024</h4>
+                                    <p><strong>Key Decisions:</strong></p>
+                                    <ul>
+                                        <li>Holiday campaign budget approved: $2.3M</li>
+                                        <li>Creative direction: "Authentic connections" theme</li>
+                                        <li>Launch timeline: Nov 20 - Dec 31</li>
+                                    </ul>
+                                    
+                                    <p><strong>Action Items:</strong></p>
+                                    <div class="action-items">
+                                        <div class="action-item">
+                                            <div class="action-content">
+                                                <span class="action-text">Finalize creative assets and brand guidelines</span>
+                                                <span class="action-owner">Sarah Chen</span>
+                                                <span class="action-due">Oct 22</span>
+                                            </div>
+                                            <div class="action-confidence">
+                                                <span class="confidence-score">96%</span>
+                                            </div>
+                                        </div>
+                                        <div class="action-item">
+                                            <div class="action-content">
+                                                <span class="action-text">Coordinate with PR team on launch strategy</span>
+                                                <span class="action-owner">Mike Rodriguez</span>
+                                                <span class="action-due">Oct 25</span>
+                                            </div>
+                                            <div class="action-confidence">
+                                                <span class="confidence-score">89%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="validation-controls">
+                                <h3>Human Validation</h3>
+                                <div class="validation-buttons">
+                                    <button class="btn btn-approve">
+                                        <i class="fas fa-check"></i>
+                                        Approve & Share (builds AI trust)
+                                    </button>
+                                    <button class="btn btn-edit">
+                                        <i class="fas fa-edit"></i>
+                                        Suggest Edits (teaches AI)
+                                    </button>
+                                    <button class="btn btn-reject">
+                                        <i class="fas fa-times"></i>
+                                        Reject (AI learns from feedback)
+                                    </button>
+                                </div>
+                                <div class="validation-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Your feedback helps AI learn your team's preferences and improves future suggestions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confidence Scoring View -->
+                <div id="confidence-view" class="view">
+                    <div class="view-header">
+                        <h1>AI Confidence Scoring</h1>
+                        <p class="view-subtitle">Visual confidence indicators with smart escalation</p>
+                    </div>
+
+                    <div class="confidence-dashboard">
+                        <div class="confidence-overview">
+                            <h3>Recent AI Suggestions</h3>
+                            <div class="suggestions-list">
+                                <div class="suggestion-item high-confidence">
+                                    <div class="suggestion-info">
+                                        <div class="suggestion-type">Meeting Summary</div>
+                                        <div class="suggestion-time">2 hours ago</div>
+                                    </div>
+                                    <div class="confidence-indicator">
+                                        <div class="confidence-bar">
+                                            <div class="confidence-fill" style="width: 92%"></div>
+                                        </div>
+                                        <span class="confidence-value">92%</span>
+                                        <span class="confidence-label high">High</span>
+                                    </div>
+                                    <div class="suggestion-action">
+                                        <span class="auto-approved">Auto-approved</span>
+                                    </div>
+                                </div>
+
+                                <div class="suggestion-item medium-confidence">
+                                    <div class="suggestion-info">
+                                        <div class="suggestion-type">Email Draft</div>
+                                        <div class="suggestion-time">4 hours ago</div>
+                                    </div>
+                                    <div class="confidence-indicator">
+                                        <div class="confidence-bar">
+                                            <div class="confidence-fill" style="width: 67%"></div>
+                                        </div>
+                                        <span class="confidence-value">67%</span>
+                                        <span class="confidence-label medium">Medium</span>
+                                    </div>
+                                    <div class="suggestion-action">
+                                        <span class="human-review">Human review requested</span>
+                                    </div>
+                                </div>
+
+                                <div class="suggestion-item low-confidence">
+                                    <div class="suggestion-info">
+                                        <div class="suggestion-type">Project Timeline</div>
+                                        <div class="suggestion-time">1 day ago</div>
+                                    </div>
+                                    <div class="confidence-indicator">
+                                        <div class="confidence-bar">
+                                            <div class="confidence-fill" style="width: 34%"></div>
+                                        </div>
+                                        <span class="confidence-value">34%</span>
+                                        <span class="confidence-label low">Low</span>
+                                    </div>
+                                    <div class="suggestion-action">
+                                        <span class="manual-approval">Manual approval required</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="confidence-rules">
+                            <h3>Smart Escalation Rules</h3>
+                            <div class="rules-list">
+                                <div class="rule-item">
+                                    <div class="rule-condition high">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>90%+ Confidence</span>
+                                    </div>
+                                    <div class="rule-action">
+                                        <span>Auto-approve and execute</span>
+                                    </div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition medium">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <span>60-89% Confidence</span>
+                                    </div>
+                                    <div class="rule-action">
+                                        <span>Flag for human review</span>
+                                    </div>
+                                </div>
+                                <div class="rule-item">
+                                    <div class="rule-condition low">
+                                        <i class="fas fa-times-circle"></i>
+                                        <span>Below 60% Confidence</span>
+                                    </div>
+                                    <div class="rule-action">
+                                        <span>Require manual approval</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Alignment View -->
+                <div id="cultural-view" class="view">
+                    <div class="view-header">
+                        <h1>Cultural Alignment Indicators</h1>
+                        <p class="view-subtitle">AI that understands your team's communication style</p>
+                    </div>
+
+                    <div class="cultural-dashboard">
+                        <div class="team-profile">
+                            <h3>Your Team's Communication DNA</h3>
+                            <div class="dna-attributes">
+                                <div class="attribute">
+                                    <div class="attribute-name">Communication Style</div>
+                                    <div class="attribute-value">Professional-Casual</div>
+                                    <div class="attribute-confidence">94% match confidence</div>
+                                </div>
+                                <div class="attribute">
+                                    <div class="attribute-name">Decision Making</div>
+                                    <div class="attribute-value">Collaborative-Consensus</div>
+                                    <div class="attribute-confidence">87% match confidence</div>
+                                </div>
+                                <div class="attribute">
+                                    <div class="attribute-name">Feedback Preference</div>
+                                    <div class="attribute-value">Direct-Constructive</div>
+                                    <div class="attribute-confidence">91% match confidence</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alignment-examples">
+                            <h3>AI Alignment in Action</h3>
+                            <div class="example-comparison">
+                                <div class="comparison-item">
+                                    <h4>Email Tone Adjustment</h4>
+                                    <div class="before-after">
+                                        <div class="before">
+                                            <div class="label">AI's First Draft</div>
+                                            <div class="content">"I am writing to formally request your immediate attention to the quarterly budget review..."</div>
+                                            <div class="alignment-score low">Cultural Alignment: 23%</div>
+                                        </div>
+                                        <div class="arrow">→</div>
+                                        <div class="after">
+                                            <div class="label">Cultural Alignment Applied</div>
+                                            <div class="content">"Hey team! Can we chat about the Q4 budget when you have a chance? Happy to jump on a quick call..."</div>
+                                            <div class="alignment-score high">Cultural Alignment: 94%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cultural-learning">
+                            <h3>Continuous Cultural Learning</h3>
+                            <div class="learning-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Week 1</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-title">Initial Cultural Assessment</div>
+                                        <div class="timeline-description">AI analyzes team communication patterns</div>
+                                        <div class="timeline-score">Alignment Score: 45%</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Week 4</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-title">Style Preferences Learned</div>
+                                        <div class="timeline-description">AI adapts to casual-professional tone</div>
+                                        <div class="timeline-score">Alignment Score: 72%</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">Week 8</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-title">Decision-Making Patterns Identified</div>
+                                        <div class="timeline-description">AI understands collaborative consensus approach</div>
+                                        <div class="timeline-score">Alignment Score: 89%</div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item current">
+                                    <div class="timeline-date">Week 12</div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-title">Full Cultural Integration</div>
+                                        <div class="timeline-description">AI suggestions feel authentically "team-native"</div>
+                                        <div class="timeline-score">Alignment Score: 94%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Progression View -->
+                <div id="progression-view" class="view">
+                    <div class="view-header">
+                        <h1>Trust Progression Timeline</h1>
+                        <p class="view-subtitle">Watch AI assistance evolve as trust builds</p>
+                    </div>
+
+                    <div class="progression-dashboard">
+                        <div class="trust-journey">
+                            <h3>Your AI Trust Journey</h3>
+                            <div class="journey-timeline">
+                                <div class="journey-phase completed">
+                                    <div class="phase-marker">
+                                        <i class="fas fa-flag-checkered"></i>
+                                    </div>
+                                    <div class="phase-content">
+                                        <h4>Phase 1: First Contact</h4>
+                                        <div class="phase-description">Initial AI interactions with full transparency</div>
+                                        <div class="phase-metrics">
+                                            <span class="metric">Trust Score: 15%</span>
+                                            <span class="metric">AI Autonomy: 0%</span>
+                                        </div>
+                                        <div class="phase-duration">Completed in 3 days</div>
+                                    </div>
+                                </div>
+
+                                <div class="journey-phase completed">
+                                    <div class="phase-marker">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="phase-content">
+                                        <h4>Phase 2: Building Confidence</h4>
+                                        <div class="phase-description">AI suggestions with human validation checkpoints</div>
+                                        <div class="phase-metrics">
+                                            <span class="metric">Trust Score: 45%</span>
+                                            <span class="metric">AI Autonomy: 25%</span>
+                                        </div>
+                                        <div class="phase-duration">Completed in 2 weeks</div>
+                                    </div>
+                                </div>
+
+                                <div class="journey-phase completed">
+                                    <div class="phase-marker">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="phase-content">
+                                        <h4>Phase 3: Proven Reliability</h4>
+                                        <div class="phase-description">AI demonstrates consistent accuracy and cultural alignment</div>
+                                        <div class="phase-metrics">
+                                            <span class="metric">Trust Score: 72%</span>
+                                            <span class="metric">AI Autonomy: 55%</span>
+                                        </div>
+                                        <div class="phase-duration">Completed in 6 weeks</div>
+                                    </div>
+                                </div>
+
+                                <div class="journey-phase current">
+                                    <div class="phase-marker">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <div class="phase-content">
+                                        <h4>Phase 4: Trusted Partner</h4>
+                                        <div class="phase-description">High-confidence AI suggestions with minimal oversight</div>
+                                        <div class="phase-metrics">
+                                            <span class="metric">Trust Score: 87%</span>
+                                            <span class="metric">AI Autonomy: 75%</span>
+                                        </div>
+                                        <div class="phase-duration">Current phase - Week 12</div>
+                                    </div>
+                                </div>
+
+                                <div class="journey-phase upcoming">
+                                    <div class="phase-marker">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="phase-content">
+                                        <h4>Phase 5: Strategic Advisor</h4>
+                                        <div class="phase-description">AI proactively suggests improvements and optimizations</div>
+                                        <div class="phase-metrics">
+                                            <span class="metric">Target Trust Score: 95%+</span>
+                                            <span class="metric">Target AI Autonomy: 90%+</span>
+                                        </div>
+                                        <div class="phase-duration">Estimated: 2-3 more weeks</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="roi-metrics">
+                            <h3>Trust-Driven ROI</h3>
+                            <div class="roi-cards">
+                                <div class="roi-card">
+                                    <div class="roi-title">Time Saved</div>
+                                    <div class="roi-value">12.5 hrs/week</div>
+                                    <div class="roi-trend">↑ 340% since Week 1</div>
+                                </div>
+                                <div class="roi-card">
+                                    <div class="roi-title">Task Automation</div>
+                                    <div class="roi-value">78%</div>
+                                    <div class="roi-trend">↑ 65% since Week 1</div>
+                                </div>
+                                <div class="roi-card">
+                                    <div class="roi-title">User Satisfaction</div>
+                                    <div class="roi-value">4.7/5</div>
+                                    <div class="roi-trend">↑ 88% since Week 1</div>
+                                </div>
+                                <div class="roi-card premium">
+                                    <div class="roi-title">Premium Value</div>
+                                    <div class="roi-value">$47/user</div>
+                                    <div class="roi-subtitle">Monthly productivity gain vs $10 cost</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Premium Value Modal -->
+        <div id="premium-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>AI Premium Value Proposition</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="value-proposition">
+                        <h3>Why Trust-Building AI Commands Premium Pricing</h3>
+                        <div class="value-points">
+                            <div class="value-point">
+                                <i class="fas fa-shield-check"></i>
+                                <div>
+                                    <h4>93% Trust Gap Solved</h4>
+                                    <p>Only solution that addresses the core barrier to AI adoption</p>
+                                </div>
+                            </div>
+                            <div class="value-point">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Progressive Value Delivery</h4>
+                                    <p>ROI increases as trust builds - sustainable competitive advantage</p>
+                                </div>
+                            </div>
+                            <div class="value-point">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Cultural Intelligence</h4>
+                                    <p>AI that adapts to team culture - impossible to replicate quickly</p>
+                                </div>
+                            </div>
+                            <div class="value-point">
+                                <i class="fas fa-crown"></i>
+                                <div>
+                                    <h4>Premium Differentiation</h4>
+                                    <p>$10/user/month justified by transparent, trustworthy AI vs black-box alternatives</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

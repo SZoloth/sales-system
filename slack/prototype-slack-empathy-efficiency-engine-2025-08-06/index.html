@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Empathy-Efficiency Workflow Engine - Interactive Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Slack branding and mode toggle -->
+    <header class="header">
+        <div class="header-left">
+            <div class="slack-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.527 2.527 0 0 1 2.521 2.521 2.527 2.527 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z" fill="#E01E5A"/>
+                </svg>
+                <span class="workspace-name">DreamWorks Animation</span>
+            </div>
+        </div>
+        
+        <div class="header-center">
+            <div class="mode-toggle-container">
+                <div class="mode-toggle" id="modeToggle">
+                    <div class="mode-option" data-mode="empathy">
+                        <span class="mode-icon">💝</span>
+                        <span class="mode-label">Empathy Mode</span>
+                    </div>
+                    <div class="mode-option active" data-mode="efficiency">
+                        <span class="mode-icon">⚡</span>
+                        <span class="mode-label">Efficiency Mode</span>
+                    </div>
+                    <div class="mode-slider"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <div class="balance-indicator" id="balanceIndicator">
+                <div class="balance-score">
+                    <span class="score-label">Team Balance</span>
+                    <span class="score-value" id="balanceScore">78%</span>
+                </div>
+                <div class="balance-chart">
+                    <div class="balance-bar empathy-bar" style="width: 65%"></div>
+                    <div class="balance-bar efficiency-bar" style="width: 91%"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="channel-list">
+                <div class="channel-section">
+                    <h3>Channels</h3>
+                    <div class="channel active" data-channel="general">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">general</span>
+                        <span class="unread-count">3</span>
+                    </div>
+                    <div class="channel" data-channel="animation-pipeline">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">animation-pipeline</span>
+                    </div>
+                    <div class="channel" data-channel="story-review">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">story-review</span>
+                        <span class="unread-count">12</span>
+                    </div>
+                    <div class="channel high-pressure" data-channel="final-layout-crunch">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">final-layout-crunch</span>
+                        <span class="unread-count">28</span>
+                        <span class="pressure-indicator">🔥</span>
+                    </div>
+                </div>
+                
+                <div class="dm-section">
+                    <h3>Direct Messages</h3>
+                    <div class="dm-item">
+                        <div class="avatar">SM</div>
+                        <span class="dm-name">Sarah Martinez</span>
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="dm-item">
+                        <div class="avatar">JC</div>
+                        <span class="dm-name">James Chen</span>
+                        <span class="status-indicator away"></span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <section class="chat-area">
+            <div class="chat-header">
+                <h2 class="channel-title"># general</h2>
+                <div class="channel-actions">
+                    <button class="action-btn" id="aiSuggestionsBtn">
+                        <span class="ai-icon">🤖</span>
+                        AI Suggestions
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cultural Context Cards -->
+            <div class="cultural-context-cards" id="contextCards">
+                <div class="context-card efficiency-card active" id="efficiencyCard">
+                    <div class="card-header">
+                        <span class="card-icon">⚡</span>
+                        <span class="card-title">High-Pressure Period Detected</span>
+                        <button class="card-close">&times;</button>
+                    </div>
+                    <div class="card-content">
+                        <p>Your team is in efficiency mode due to the upcoming milestone. Consider scheduling relationship check-ins to maintain psychological safety.</p>
+                        <div class="card-actions">
+                            <button class="card-btn primary" id="scheduleCheckinBtn">Schedule Check-in</button>
+                            <button class="card-btn secondary">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="context-card empathy-card" id="empathyCard" style="display: none;">
+                    <div class="card-header">
+                        <span class="card-icon">💝</span>
+                        <span class="card-title">Team Bonding Opportunity</span>
+                        <button class="card-close">&times;</button>
+                    </div>
+                    <div class="card-content">
+                        <p>Great work on the milestone! This is a perfect time to celebrate wins and strengthen team relationships.</p>
+                        <div class="card-actions">
+                            <button class="card-btn primary">Celebrate Wins</button>
+                            <button class="card-btn secondary">Share Gratitude</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div class="messages-container" id="messagesContainer">
+                <div class="message">
+                    <div class="message-avatar">SM</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-author">Sarah Martinez</span>
+                            <span class="message-time">9:15 AM</span>
+                        </div>
+                        <div class="message-text">Morning team! Quick standup: Final layout sequences for Act 2 are due today. Current status?</div>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-avatar">JC</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-author">James Chen</span>
+                            <span class="message-time">9:18 AM</span>
+                        </div>
+                        <div class="message-text">70% complete on sequences 12-18. Running into some camera angle issues but should be resolved by noon.</div>
+                    </div>
+                </div>
+
+                <div class="message ai-suggestion" id="aiSuggestion1" style="display: none;">
+                    <div class="message-avatar ai">AI</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-author">Workflow AI</span>
+                            <span class="message-time">9:19 AM</span>
+                        </div>
+                        <div class="message-text">
+                            <div class="ai-suggestion-content">
+                                <strong>💡 Empathy Suggestion:</strong> James mentioned challenges. Consider: "Thanks for the update, James. Camera angles can be tricky - do you need any support or a second pair of eyes on this?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="message-avatar">MR</div>
+                    <div class="message-content">
+                        <div class="message-header">
+                            <span class="message-author">Maria Rodriguez</span>
+                            <span class="message-time">9:22 AM</span>
+                        </div>
+                        <div class="message-text">Sequences 19-24 are ready for review. Also finished the dragon flight sequence early! 🐉</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="message-input-container">
+                <div class="smart-suggestions" id="smartSuggestions">
+                    <div class="suggestion-chip" data-message="Great work Maria! 🎉">Celebrate Win</div>
+                    <div class="suggestion-chip" data-message="James, need any help with those camera angles?">Offer Support</div>
+                    <div class="suggestion-chip" data-message="Team standup at 2pm to sync on final push">Schedule Sync</div>
+                </div>
+                <div class="message-input">
+                    <input type="text" id="messageInput" placeholder="Type your message here..." />
+                    <button class="send-btn" id="sendBtn">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel - Team Health Dashboard -->
+        <aside class="right-panel">
+            <div class="team-health-dashboard">
+                <h3>Team Health Dashboard</h3>
+                
+                <div class="health-metric">
+                    <div class="metric-header">
+                        <span class="metric-label">Productivity Score</span>
+                        <span class="metric-value" id="productivityScore">91%</span>
+                    </div>
+                    <div class="metric-bar">
+                        <div class="metric-fill productivity" style="width: 91%"></div>
+                    </div>
+                </div>
+
+                <div class="health-metric">
+                    <div class="metric-header">
+                        <span class="metric-label">Relationship Health</span>
+                        <span class="metric-value" id="relationshipScore">65%</span>
+                    </div>
+                    <div class="metric-bar">
+                        <div class="metric-fill relationship" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <div class="health-metric">
+                    <div class="metric-header">
+                        <span class="metric-label">Psychological Safety</span>
+                        <span class="metric-value" id="safetyScore">73%</span>
+                    </div>
+                    <div class="metric-bar">
+                        <div class="metric-fill safety" style="width: 73%"></div>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h4>Smart Recommendations</h4>
+                    <div class="recommendation-item">
+                        <span class="rec-icon">🎯</span>
+                        <div class="rec-content">
+                            <div class="rec-title">Schedule Team Check-in</div>
+                            <div class="rec-desc">Efficiency is high but relationships need attention</div>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-item">
+                        <span class="rec-icon">🤝</span>
+                        <div class="rec-content">
+                            <div class="rec-title">Peer Support Matching</div>
+                            <div class="rec-desc">Connect James with Maria for camera angle expertise</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Demo Controls (for presentation) -->
+    <div class="demo-controls" id="demoControls">
+        <div class="demo-header">
+            <h4>Demo Controls</h4>
+            <button class="demo-toggle" id="demoToggle">Hide Controls</button>
+        </div>
+        <div class="demo-actions">
+            <button class="demo-btn" id="simulateStress">Simulate High Pressure</button>
+            <button class="demo-btn" id="simulateSuccess">Simulate Team Success</button>
+            <button class="demo-btn" id="showAISuggestions">Show AI Suggestions</button>
+            <button class="demo-btn" id="resetDemo">Reset Demo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Pulse Dashboard - Slack Leadership Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fab fa-slack"></i>
+                <span>Cultural Pulse Dashboard</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="date-time">
+                <span id="current-date-time"></span>
+            </div>
+            <div class="user-info">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM0QTkwRTIiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6Ii8+Cjwvc3ZnPgo8L3N2Zz4K" alt="CEO Avatar" class="avatar">
+                <span>Denise Dresser, CEO</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-main">
+        <!-- Top KPI Cards -->
+        <section class="kpi-grid">
+            <div class="kpi-card cultural-health">
+                <div class="kpi-header">
+                    <h3>Overall Cultural Health</h3>
+                    <i class="fas fa-heart-pulse"></i>
+                </div>
+                <div class="kpi-value" id="overall-health">87</div>
+                <div class="kpi-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>+3% from last week</span>
+                </div>
+            </div>
+
+            <div class="kpi-card empathy-efficiency">
+                <div class="kpi-header">
+                    <h3>Empathy-Efficiency Balance</h3>
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="kpi-value" id="balance-score">82</div>
+                <div class="kpi-trend neutral">
+                    <i class="fas fa-minus"></i>
+                    <span>Stable this week</span>
+                </div>
+            </div>
+
+            <div class="kpi-card integration-health">
+                <div class="kpi-header">
+                    <h3>Salesforce Integration Health</h3>
+                    <i class="fas fa-plug"></i>
+                </div>
+                <div class="kpi-value" id="integration-score">76</div>
+                <div class="kpi-trend warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Requires attention</span>
+                </div>
+            </div>
+
+            <div class="kpi-card predictive-risk">
+                <div class="kpi-header">
+                    <h3>Cultural Risk Prediction</h3>
+                    <i class="fas fa-crystal-ball"></i>
+                </div>
+                <div class="kpi-value risk-medium" id="risk-level">Medium</div>
+                <div class="kpi-trend warning">
+                    <i class="fas fa-clock"></i>
+                    <span>2 interventions recommended</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Department Scorecards -->
+        <section class="scorecards-section">
+            <h2>Department Cultural Health Scorecards</h2>
+            <div class="scorecards-grid" id="department-scorecards">
+                <!-- Dynamic department cards will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Analytics and Insights -->
+        <section class="analytics-section">
+            <div class="analytics-left">
+                <div class="chart-container">
+                    <h3>Cultural Health Trends</h3>
+                    <canvas id="cultural-trend-chart"></canvas>
+                </div>
+                
+                <div class="integration-metrics">
+                    <h3>Salesforce Integration Impact</h3>
+                    <div class="integration-grid">
+                        <div class="metric-item">
+                            <span class="metric-label">Process Adoption</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                            <span class="metric-value">78%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">User Satisfaction</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <span class="metric-value">65%</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Cultural Alignment</span>
+                            <div class="progress-bar">
+                                <div class="progress warning" style="width: 52%"></div>
+                            </div>
+                            <span class="metric-value">52%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-right">
+                <div class="ai-insights-panel">
+                    <h3>AI-Powered Insights & Recommendations</h3>
+                    <div class="insights-list" id="ai-insights">
+                        <!-- Dynamic insights will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Action Center -->
+        <section class="action-center">
+            <h2>Leadership Action Center</h2>
+            <div class="action-grid">
+                <div class="action-card immediate">
+                    <div class="action-header">
+                        <h4>Immediate Actions</h4>
+                        <span class="action-count">3</span>
+                    </div>
+                    <div class="action-list" id="immediate-actions">
+                        <!-- Dynamic actions will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="action-card strategic">
+                    <div class="action-header">
+                        <h4>Strategic Initiatives</h4>
+                        <span class="action-count">2</span>
+                    </div>
+                    <div class="action-list" id="strategic-actions">
+                        <!-- Dynamic actions will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="action-card communication">
+                    <div class="action-header">
+                        <h4>Communication Templates</h4>
+                        <span class="action-count">4</span>
+                    </div>
+                    <div class="action-list" id="communication-templates">
+                        <!-- Dynamic templates will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="footer-info">
+            <span>Cultural Pulse Dashboard v2.1.0 | Last updated: <span id="last-updated"></span></span>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Data Sources</a>
+            <a href="#" class="footer-link">Methodology</a>
+            <a href="#" class="footer-link">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Modal for Department Details -->
+    <div id="department-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
