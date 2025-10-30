@@ -1,7 +1,7 @@
 ---
 name: ux-concept-designer
 description: Use this agent when you need to transform product requirements, user research, and problem statements into detailed UX/UI concept designs. Examples: <example>Context: User has completed product research and needs to translate findings into concrete design concepts. user: 'I've analyzed the market for a fitness tracking app for seniors. The main problems are complex interfaces and small text. Can you help me design some UX concepts?' assistant: 'I'll use the ux-concept-designer agent to create detailed UX/UI concepts that address the interface complexity and accessibility issues you've identified.' <commentary>Since the user needs UX/UI concepts based on research findings, use the ux-concept-designer agent to create detailed design solutions.</commentary></example> <example>Context: User has an RFP or problem statement and needs visual design concepts to demonstrate potential solutions. user: 'Here's our RFP for a new employee onboarding system. The current process is confusing and takes too long. We need some design concepts to show stakeholders.' assistant: 'Let me use the ux-concept-designer agent to analyze your RFP and create detailed UX/UI concepts that streamline the onboarding process.' <commentary>The user needs design concepts based on a problem statement, which is exactly what the ux-concept-designer agent specializes in.</commentary></example>
-model: sonnet
+model: inherit
 color: pink
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: stakeholder-psychologist
 description: Use this agent when you need deep psychological and organizational analysis of specific individuals within a company or stakeholder network. Examples include: analyzing key decision-makers before important negotiations, understanding the motivations and dynamics of leadership teams, researching potential business partners or investors, preparing for high-stakes meetings by understanding attendee psychology, conducting due diligence on executive teams, or mapping the human dynamics within target organizations for strategic planning.
-model: sonnet
+model: inherit
 color: blue
 ---
 

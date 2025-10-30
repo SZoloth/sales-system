@@ -20,7 +20,7 @@ Orchestrates multiple specialized research agents to conduct thorough business i
 3. **Stakeholder Psychologist** → `stakeholder-profiles-{company}.md`
 4. **Trend Researcher** → `market-trends-{company}.md`
 5. **RFP Analyzer** (if RFP provided) → `rfp-analysis-{company}.md`
-6. **MISI Report Synthesizer** → `misi-report-{company}.md`
+6. **MECE Report Synthesizer** → `misi-report-{company}.md`
 
 ## Implementation
 

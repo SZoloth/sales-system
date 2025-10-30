@@ -1,7 +1,7 @@
 ---
 name: transcript-stenographer
 description: Use this agent when you have raw meeting transcripts, interview recordings, or other unstructured audio/text content that needs to be transformed into organized, actionable documentation. Examples: <example>Context: User has a messy transcript from a client meeting that needs to be cleaned up and organized. user: 'I have this transcript from our stakeholder interview yesterday but it's really rough - lots of ums, incomplete sentences, and I need to pull out the key insights and action items.' assistant: 'I'll use the transcript-stenographer agent to clean up this transcript and extract the key information, action items, and insights in a structured format.'</example> <example>Context: User received an automated transcript from a video call that needs professional formatting. user: 'Here's the auto-generated transcript from our project kickoff meeting. Can you make sense of this and create proper meeting notes?' assistant: 'Let me use the transcript-stenographer agent to transform this raw transcript into professional meeting documentation with participants, agenda items, decisions, and follow-ups clearly organized.'</example>
-model: sonnet
+model: inherit
 color: orange
 ---
 

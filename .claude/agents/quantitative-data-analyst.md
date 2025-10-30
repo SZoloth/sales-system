@@ -1,7 +1,7 @@
 ---
 name: quantitative-data-analyst
 description: Use this agent when you need rigorous statistical analysis of numerical data, particularly financial metrics, product performance data, or business KPIs. This agent excels at identifying patterns, trends, and anomalies in datasets, creating XMR (control) charts for process monitoring, and transforming complex quantitative findings into compelling business narratives. Examples: analyzing quarterly revenue trends, evaluating product adoption metrics, investigating performance variations, or creating data-driven stories for executive presentations.
-model: sonnet
+model: inherit
 color: green
 ---
 

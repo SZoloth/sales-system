@@ -1,7 +1,7 @@
 ---
 name: product-research-analyst
 description: Use this agent when you need comprehensive product research and competitive analysis. Examples: <example>Context: User wants to understand a competitor's positioning before launching their own product. user: 'Can you research Slack and tell me how they position themselves and what users think about it?' assistant: 'I'll use the product-research-analyst agent to conduct comprehensive research on Slack's positioning, value proposition, and user sentiment across multiple sources.' <commentary>Since the user is requesting detailed product research including positioning and user sentiment analysis, use the product-research-analyst agent to gather information from websites, reviews, and social media.</commentary></example> <example>Context: User is evaluating potential software vendors for their company. user: 'I'm considering Notion for our team. What do users actually think about it?' assistant: 'Let me use the product-research-analyst agent to research Notion comprehensively, including user reviews and sentiment analysis.' <commentary>The user needs product evaluation with user sentiment, which requires the product-research-analyst agent to gather reviews and synthesize findings.</commentary></example>
-model: sonnet
+model: inherit
 color: red
 ---
 

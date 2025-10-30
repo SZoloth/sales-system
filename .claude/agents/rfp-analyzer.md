@@ -1,7 +1,7 @@
 ---
 name: rfp-analyzer
 description: Use this agent when you need to analyze, understand, or respond to Request for Proposals (RFPs). This includes breaking down complex RFPs, identifying hidden requirements, evaluating proposal responses, or getting strategic guidance on RFP opportunities. Examples: <example>Context: User has received a complex government RFP for IT services and needs help understanding the requirements. user: 'I just received this 200-page RFP for cloud infrastructure services. Can you help me understand what they're really asking for?' assistant: 'I'll use the rfp-analyzer agent to break down this RFP and identify the core requirements, hidden asks, and strategic implications.' <commentary>Since the user needs comprehensive RFP analysis, use the rfp-analyzer agent to dissect the document and provide strategic insights.</commentary></example> <example>Context: User has drafted a proposal response and wants to ensure it addresses all RFP requirements. user: 'Here's my draft response to the marketing services RFP. Does this cover everything they asked for?' assistant: 'Let me use the rfp-analyzer agent to cross-reference your response against the original RFP requirements to identify any gaps or missed opportunities.' <commentary>The user needs validation that their proposal response is comprehensive, so use the rfp-analyzer agent to perform a thorough gap analysis.</commentary></example>
-model: sonnet
+model: inherit
 color: yellow
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: interactive-prototype-builder
 description: Use this agent when you need to transform design specifications, mockups, or wireframes into interactive prototypes that can be tested and shared. This includes building responsive UI components, implementing design systems, creating clickable prototypes from Figma designs, or developing proof-of-concept features for user testing. Examples: <example>Context: The user has received design specs from a UX designer and needs to create an interactive prototype. user: 'I have these Figma designs for a new dashboard layout. Can you help me build a working prototype?' assistant: 'I'll use the interactive-prototype-builder agent to transform your Figma designs into a responsive, interactive prototype that stakeholders can test and provide feedback on.' <commentary>Since the user needs design specs converted to an interactive prototype, use the interactive-prototype-builder agent.</commentary></example> <example>Context: The user wants to quickly test a specific UI component concept. user: 'I need to prototype a new card component with hover states and animations to show the team' assistant: 'Let me use the interactive-prototype-builder agent to create an interactive card component prototype with the hover effects and animations you described.' <commentary>The user needs a specific UI element prototyped for demonstration, perfect for the interactive-prototype-builder agent.</commentary></example>
-model: sonnet
+model: inherit
 color: cyan
 ---
 

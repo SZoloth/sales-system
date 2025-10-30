@@ -1,7 +1,7 @@
 ---
 name: pitch-presentation-architect
 description: Use this agent when you need to create compelling pitch presentations or RFP responses that convert prospects into clients. This agent excels at transforming research findings into persuasive narratives and structured presentations. Examples: <example>Context: The user has completed market research and needs to create a client pitch presentation. user: 'I've finished the research on our potential client's digital transformation needs. Can you help me create a presentation that will win this contract?' assistant: 'I'll use the pitch-presentation-architect agent to create a comprehensive presentation outline with slide titles, content, and speaker notes based on your research findings and our proven templates.' <commentary>Since the user needs a persuasive presentation based on research, use the pitch-presentation-architect agent to create a structured, high-converting pitch.</commentary></example> <example>Context: The user needs to respond to an RFP with a compelling narrative. user: 'We received an RFP for a major consulting project. I have all the requirements and our research - can you help me craft a winning response?' assistant: 'I'll use the pitch-presentation-architect agent to analyze the RFP requirements and create both a narrative response and presentation structure that addresses their needs persuasively.' <commentary>Since this is an RFP response requiring persuasive writing and structure, use the pitch-presentation-architect agent to craft a compelling proposal.</commentary></example>
-model: sonnet
+model: inherit
 color: orange
 ---
 

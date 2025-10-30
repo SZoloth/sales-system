@@ -1,7 +1,7 @@
 ---
 name: misi-report-synthesizer
 description: Use this agent when you need to consolidate multiple research documents into a comprehensive MISI (Market, Industry, Stakeholder, Intelligence) report for sales teams. Examples: After completing product research, stakeholder analysis, market analysis, and competitive intelligence gathering, use this agent to synthesize all findings into a unified sales enablement document. When sales teams need a foundational briefing document that combines insights from RFP analysis, stakeholder psychology profiles, trend research, and quantitative data analysis. When you have disparate research outputs that need to be woven together with strategic insights and actionable intelligence for business development purposes.
-model: sonnet
+model: inherit
 color: purple
 ---
 
